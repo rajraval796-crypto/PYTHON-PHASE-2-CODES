@@ -1,0 +1,5 @@
+get fun in dict
+syntax: d.get("key", here enter something in case the key is not found )
+
+lambda:
+z=sorted(d.items(),key=lambda x:x[1],reverse=True)
