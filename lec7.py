@@ -26,22 +26,22 @@
 # y.symmetric_difference(x) # gives everything except the common elements 
 
 #--------------------------------------- code 3 --------------------------------------------------
-from functools import *
+# from functools import *
 
-a=[-9,-8,-7,1,2,3]
-# b=list(filter(lambda x:x>0,a))
-# c=list(filter(lambda x:x<0,a))
-# print(b)
-# print(c)
-x=(reduce(lambda x,y:x+y,a))
-print(x)
-l1=[1,2,3]
-l2=[4,5,6]
-z=list(map(lambda x,y:x+y,l1,l2))
-print(z)
+# a=[-9,-8,-7,1,2,3]
+# # b=list(filter(lambda x:x>0,a))
+# # c=list(filter(lambda x:x<0,a))
+# # print(b)
+# # print(c)
+# x=(reduce(lambda x,y:x+y,a))
+# print(x)
+# l1=[1,2,3]
+# l2=[4,5,6]
+# z=list(map(lambda x,y:x+y,l1,l2))
+# print(z)
 
 #--------------------------------------- COMPRESSION --------------------------------------------------
-z=[ i*i for i in range(6) ]
-print(z)
-y=[ i*i for i in range(6)  if i%2==0]
-print(y)
+# z=[ i*i for i in range(6) ]
+# print(z)
+# y=[ i*i for i in range(6)  if i%2==0]
+# print(y)
