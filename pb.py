@@ -167,15 +167,137 @@
 
 # print(f"Cipher: {cipher}")
 
-b=input("ENTER A STRING")
-keys=int(input("ENTER THE NUMBER OF KEYS"))
-a="ABCDEFHIJKLMNOPQRSTUVWXYZ"
-b=b.upper()
-ans=""
-for i in b:
-    if i in a:
-        p=((a.find(i)+keys))%26
-        ans=ans+a[p]
-    else:
-        ans=ans+i
-print(ans)
+# b=input("ENTER A STRING:")
+# keys=int(input("ENTER THE NUMBER OF KEYS:"))
+# a="ABCDEFHIJKLMNOPQRSTUVWXYZ"
+# b=b.upper()
+# ans=""
+# for i in b:
+#     if i in a:
+#         p=((a.find(i)+keys))%26
+#         ans=ans+a[p]
+#     else:
+#         ans=ans+i
+# print(ans)
+
+
+#-------------------------------------------- QUE NO:400 ----------------------------------------------
+
+# def special_count(a):
+#     special_elem=0
+#     n=len(a)
+    
+
+#     for i in range(n):
+#         temp_list= a[:i]+a[i+1:]
+
+#         even=0
+#         odd=0
+
+#         for j in range (len(temp_list)):
+#             if j%2==0:
+#                 even+=temp_list[j]
+#             else:
+#                 odd+=temp_list[j]
+#         if even==odd:
+#             special_elem+=1
+
+#     return special_elem
+
+# print(special_count([5,5,2,5,8]))
+
+#-------------------------------------------- QUE NO:401 ----------------------------------------------
+# def syracuse(a):
+#     x=a
+#     print(f"THE STARTING NUMBER OF THE SEQUENCE IS : {x} ")
+#     l=[]
+#     while x!=1:
+#         if x%2==0:
+#             x=x//2
+#             # print(x)
+#             l.append(x)
+#         else:
+#             x=3*x+1
+#             # print(x)
+#             l.append(x)
+#     print(l)
+
+# a=int(input(" ENETER A NUMBER :"))
+# syracuse(a)
+
+#-------------------------------------------- QUE NO:434 ----------------------------------------------
+
+# def missing_smallest(a):
+#     smallest = 1
+#     while True:
+#         found = False
+#         for i in a:
+#             if i == smallest:
+#                 found = True
+#                 break
+#         if not found:
+#             return f"THE SMALLEST POSITIVE MISSING NUMBER IS {smallest}"
+#         smallest += 1
+
+# print(missing_smallest([10, 0, 3, -4, 2, 1]))
+
+
+#-------------------------------------------- QUE NO:440 ----------------------------------------------
+
+# l=[1,2,-14,5,-12,-24,3,4]
+# positive=sum(filter(lambda x:x>0,l))
+# negative=sum(filter(lambda x:x<0,l))
+# print(f"THE SUM OF ALL POSITIVE NUMBERS IS :{positive} THE SUM OF ALL THE NEGATIVE NUMBERS IS :{negative}")
+
+#-------------------------------------------- QUE NO:443 ----------------------------------------------
+
+# def group(a):
+#     d={}
+#     for i in a:
+#         if i not in d:
+#             d[i] = [i]
+#         else:
+#             d[i].append(i)
+#     sort_tup=sorted(d.items(),key=lambda x:len(x[1]),reverse=True)
+#     return dict(sort_tup)
+
+# print(group([4, 6, 6, 4, 2, 2, 4, 8, 5, 8]))
+
+#-------------------------------------------- QUE NO:444 ----------------------------------------------
+
+def rotate_matrix_90_clockwise(A):
+    N = len(A)
+    
+    # Step 1: Transpose the matrix in-place
+    for i in range(N):
+        for j in range(i + 1, N):
+            A[i][j], A[j][i] = A[j][i], A[i][j]
+            
+    # Step 2: Reverse each row in-place
+    for i in range(N):
+        left = 0
+        right = N - 1
+        while left < right:
+            A[i][left], A[i][right] = A[i][right], A[i][left]
+            left += 1
+            right -= 1
+
+# 1. Get N from the user
+N = int(input("Enter the value of N (1 to 20): "))
+
+# 2. Get the N x N matrix from the user row by row
+A = []
+print(f"Enter the matrix elements row by row ({N} values separated by spaces for each row):")
+for i in range(N):
+    row = [int(x) for x in input(f"Row {i+1}: ").split()]
+    A.append(row)
+
+# 3. Rotate the matrix in-place
+rotate_matrix_90_clockwise(A)
+
+# 4. Print the rotated matrix
+print("\nRotated Matrix (90 degrees clockwise):")
+for row in A:
+    print(row)
+
+
