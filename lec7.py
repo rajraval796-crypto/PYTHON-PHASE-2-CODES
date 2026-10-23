@@ -46,6 +46,7 @@
 # y=[ i*i for i in range(6)  if i%2==0]
 # print(y)
 
+
 ipl={"a":1,"b":2,"c":3}
 test={"a":10,"b":30,"c":40}
 total={}

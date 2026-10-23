@@ -152,20 +152,20 @@
 #-------------------------------------------- QUE NO:318 ----------------------------------------------
 
 
-# text = input("Enter the input text: ")
-# shift = int(input("Enter the shift value: "))
+text = input("Enter the input text: ")
+shift = int(input("Enter the shift value: "))
 
-# cipher = ""
+cipher = ""
 
-# for char in text:
-#   if char.isupper():
-#     cipher += chr((ord(char) - ord("A") + shift) % 26 + ord("A"))
-#   elif char.islower():
-#     cipher += chr((ord(char) - ord("a") + shift) % 26 + ord("a"))
-#   else:
-#     cipher += char
+for char in text:
+  if char.isupper():
+    cipher += chr((ord(char) - ord("A") + shift) % 26 + ord("A"))
+  elif char.islower():
+    cipher += chr((ord(char) - ord("a") + shift) % 26 + ord("a"))
+  else:
+    cipher += char
 
-# print(f"Cipher: {cipher}")
+print(f"Cipher: {cipher}")
 
 # b=input("ENTER A STRING:")
 # keys=int(input("ENTER THE NUMBER OF KEYS:"))

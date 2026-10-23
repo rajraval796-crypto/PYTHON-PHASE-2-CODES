@@ -25,3 +25,9 @@ reduce(function, iterable)
 s="A STRING"
 t=str.maketrans("VALUE TO REPLACE","WITH WHOM TO REPLACE","REMOVE")
 #you can replace and remove multiple values 
+
+IMPORTANT TOPIC :
+PASSWORD CODE 
+NUMBER TO WORDS
+ROMAN TO NUM , NUM TO ROMAN  
+
