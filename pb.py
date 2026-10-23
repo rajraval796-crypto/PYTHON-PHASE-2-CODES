@@ -265,39 +265,69 @@
 
 #-------------------------------------------- QUE NO:444 ----------------------------------------------
 
-def rotate_matrix_90_clockwise(A):
-    N = len(A)
+# def rotate_matrix_90_clockwise(A):
+#     N = len(A)
     
-    # Step 1: Transpose the matrix in-place
-    for i in range(N):
-        for j in range(i + 1, N):
-            A[i][j], A[j][i] = A[j][i], A[i][j]
+#     # Step 1: Transpose the matrix in-place
+#     for i in range(N):
+#         for j in range(i + 1, N):
+#             A[i][j], A[j][i] = A[j][i], A[i][j]
             
-    # Step 2: Reverse each row in-place
-    for i in range(N):
-        left = 0
-        right = N - 1
-        while left < right:
-            A[i][left], A[i][right] = A[i][right], A[i][left]
-            left += 1
-            right -= 1
+#     # Step 2: Reverse each row in-place
+#     for i in range(N):
+#         left = 0
+#         right = N - 1
+#         while left < right:
+#             A[i][left], A[i][right] = A[i][right], A[i][left]
+#             left += 1
+#             right -= 1
 
-# 1. Get N from the user
-N = int(input("Enter the value of N (1 to 20): "))
+# # 1. Get N from the user
+# N = int(input("Enter the value of N (1 to 20): "))
 
-# 2. Get the N x N matrix from the user row by row
-A = []
-print(f"Enter the matrix elements row by row ({N} values separated by spaces for each row):")
-for i in range(N):
-    row = [int(x) for x in input(f"Row {i+1}: ").split()]
-    A.append(row)
+# # 2. Get the N x N matrix from the user row by row
+# A = []
+# print(f"Enter the matrix elements row by row ({N} values separated by spaces for each row):")
+# for i in range(N):
+#     row = [int(x) for x in input(f"Row {i+1}: ").split()]
+#     A.append(row)
 
-# 3. Rotate the matrix in-place
-rotate_matrix_90_clockwise(A)
+# # 3. Rotate the matrix in-place
+# rotate_matrix_90_clockwise(A)
 
-# 4. Print the rotated matrix
-print("\nRotated Matrix (90 degrees clockwise):")
-for row in A:
-    print(row)
+# # 4. Print the rotated matrix
+# print("\nRotated Matrix (90 degrees clockwise):")
+# for row in A:
+#     print(row)
 
 
+#-------------------------------------------- QUE NO:445 ----------------------------------------------
+
+# a = ["lessonplan", "lesson", "lees", "length"]
+# a.sort()
+# ans = ""
+# print("Sorted list:", a)
+
+# for i in range(min(len(a[0]), len(a[-1]))):
+#     if a[0][i] == a[-1][i]:
+#         ans = ans + a[0][i]
+#     else:
+#         break
+
+# if ans:
+#     print(f"The longest Common Prefix is: {ans}")
+# else:
+#     print("-1")
+
+names1 = ['Amir', 'Bear', 'Charlton', 'Daman']
+names2 = names1
+names3 = names1[:]
+names2[0] = 'Alice'
+names3[1] = 'Bob'
+sum = 0
+for ls in (names1, names2, names3):
+    if ls[0] == 'Alice':
+        sum += 1
+    if ls[1] == 'Bob':
+        sum += 10
+print(sum)

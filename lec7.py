@@ -19,9 +19,9 @@
 
 # x={1,2,3,-1000,"RAJ",88,"RAVAL"}
 # y={"raj",2,3,4,-1000,55,88,"RAVAL"}
-# x.difference(y) # gives output in form of x-y
+# print(x.difference(y)) # gives output in form of x-y
 # y.difference(x) # gives output in form of y-x
-# x.union(y) # gives all the output , and returns the duplicate values only once
+# print(x.union(y)) # gives all the output , and returns the duplicate values only once
 # x.intersection(y) # gives output for all the common elements 
 # y.symmetric_difference(x) # gives everything except the common elements 
 
@@ -45,3 +45,11 @@
 # print(z)
 # y=[ i*i for i in range(6)  if i%2==0]
 # print(y)
+
+ipl={"a":1,"b":2,"c":3}
+test={"a":10,"b":30,"c":40}
+total={}
+for i,j in ipl.items():
+    test[i]=test[i]+j
+print(test)
+
