@@ -13,10 +13,7 @@ for char in text:
 
 print(f"Cipher: {cipher}")
 
-# text = input("Enter the input text: ")
-# shift = int(input("Enter the shift value: "))
 
-# cipher = ""
 decrypt=""
 for char in cipher:
   if char.isupper():
@@ -26,5 +23,5 @@ for char in cipher:
   else:
     decrypt += char
 
-print(f"Cipher: {decrypt}")
+print(f" decrypt: {decrypt}")
 
